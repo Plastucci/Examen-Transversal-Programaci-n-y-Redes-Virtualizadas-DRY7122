@@ -40,13 +40,13 @@ def geocoding(location, key):
     return url, json_status,lat,lng, new_loc
 while True:
     print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    print("Vehicle profiles available on Graphhopper:")
+    print("Vehicle profiles available on this Script")
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print("car, bike, foot")
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     profile=["car", "bike", "foot"]
     vehicle = input("Enter a vehicle profile from the list above: ")
-    if vehicle == "quit" or vehicle == "q":
+    if vehicle == "salir" or vehicle == "s":
         break
     elif vehicle in profile:
         vehicle = vehicle
@@ -54,12 +54,12 @@ while True:
         vehicle = "car"
         print("No valid vehicle profile was entered. Using the car profile.")
     loc1 = input("Starting Location: ")
-    if loc1 == "quit" or loc1 == "q":
+    if loc1 == "salir" or loc1 == "s":
         break
     orig = geocoding(loc1, key)
     print(orig)
     loc2 = input("Destination: ")
-    if loc2 == "quit" or loc2 == "q":
+    if loc2 == "salir" or loc2 == "s":
         break
     dest = geocoding(loc2, key)
     print(dest)
